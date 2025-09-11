@@ -1,0 +1,16 @@
+{
+  "name": "@easy-recruit/web",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "pnpm --parallel --recursive dev",
+    "build": "pnpm --recursive build",
+    "preview": "pnpm --parallel --recursive preview",
+    "lint": "pnpm --recursive lint",
+    "type-check": "pnpm --recursive type-check"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}
