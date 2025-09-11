@@ -20,6 +20,32 @@
     "forceConsistentCasingInFileNames": true,
     "noImplicitAny": false,
     "strictBindCallApply": false,
-    "noFallthroughCasesInSwitch": false
+    "noFallthroughCasesInSwitch": false,
+    "paths": {
+      "@app/env": [
+        "libs/env/src"
+      ],
+      "@app/env/*": [
+        "libs/env/src/*"
+      ],
+      "@app/logger": [
+        "libs/logger/src"
+      ],
+      "@app/logger/*": [
+        "libs/logger/src/*"
+      ],
+      "@app/prisma": [
+        "libs/prisma/src"
+      ],
+      "@app/prisma/*": [
+        "libs/prisma/src/*"
+      ],
+      "@app/sse": [
+        "libs/sse/src"
+      ],
+      "@app/sse/*": [
+        "libs/sse/src/*"
+      ]
+    }
   }
 }

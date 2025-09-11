@@ -1,0 +1,23 @@
+{
+  "moduleFileExtensions": [
+    "js",
+    "json",
+    "ts"
+  ],
+  "rootDir": ".",
+  "testEnvironment": "node",
+  "testRegex": ".e2e-spec.ts$",
+  "transform": {
+    "^.+\\.(t|j)s$": "ts-jest"
+  },
+  "moduleNameMapper": {
+    "@app/env": "<rootDir>/../libs/env/src",
+    "@app/env/(.*)": "<rootDir>/../libs/env/src/$1",
+    "@app/logger": "<rootDir>/../libs/logger/src",
+    "@app/logger/(.*)": "<rootDir>/../libs/logger/src/$1",
+    "@app/prisma": "<rootDir>/../libs/prisma/src",
+    "@app/prisma/(.*)": "<rootDir>/../libs/prisma/src/$1",
+    "@app/sse": "<rootDir>/../libs/sse/src",
+    "@app/sse/(.*)": "<rootDir>/../libs/sse/src/$1"
+  }
+}
