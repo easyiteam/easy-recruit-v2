@@ -1,4 +1,5 @@
 import './assets/main.css'
+import '@easy-recruit/ui/style.css'
 
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'

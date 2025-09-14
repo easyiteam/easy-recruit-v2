@@ -1,20 +1,15 @@
-declare module '@easy-recruit/ui' {
+import { DefineComponent } from 'vue'
+
+// Component type definitions
+export declare module '@easy-recruit/ui' {
   import { DefineComponent } from 'vue'
   
   export const Button: DefineComponent<any, any, any>
   export const Input: DefineComponent<any, any, any>
-  export const Card: DefineComponent<any, any, any & {
-    header?: any
-    footer?: any
-    default?: any
-  }>
+  export const Card: DefineComponent<any, any, any>
   export const Badge: DefineComponent<any, any, any>
   export const Avatar: DefineComponent<any, any, any>
-  export const Modal: DefineComponent<any, any, any & {
-    header?: any
-    footer?: any
-    default?: any
-  }>
+  export const Modal: DefineComponent<any, any, any>
   export const Select: DefineComponent<any, any, any>
   export const Checkbox: DefineComponent<any, any, any>
   export const Radio: DefineComponent<any, any, any>
@@ -22,15 +17,9 @@ declare module '@easy-recruit/ui' {
   export const Textarea: DefineComponent<any, any, any>
   export const Tooltip: DefineComponent<any, any, any>
   export const Popover: DefineComponent<any, any, any>
-  export const Accordion: DefineComponent<any, any, any & {
-    header?: any
-    default?: any
-  }>
+  export const Accordion: DefineComponent<any, any, any>
   export const Tabs: DefineComponent<any, any, any>
-  export const Table: DefineComponent<any, any, any & {
-    header?: any
-    default?: any
-  }>
+  export const Table: DefineComponent<any, any, any>
   export const Pagination: DefineComponent<any, any, any>
   export const Breadcrumb: DefineComponent<any, any, any>
   export const Progress: DefineComponent<any, any, any>
@@ -43,19 +32,4 @@ declare module '@easy-recruit/ui' {
   export const Timeline: DefineComponent<any, any, any>
   
   export function cn(...classes: any[]): string
-}
-
-declare module '@easy-recruit/composables' {
-  export function useApi<T>(): {
-    data: any
-    loading: any
-    error: any
-    execute: (apiCall: () => Promise<T>) => Promise<void>
-    reset: () => void
-  }
-  
-  export function useLocalStorage<T>(key: string, defaultValue: T): {
-    state: any
-    setValue: (value: T) => void
-  }
 }

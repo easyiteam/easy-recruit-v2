@@ -1,12 +1,299 @@
-/* Simple CSS for the UI package */
-:root {
-  --primary: #3b82f6;
-  --primary-foreground: #ffffff;
-  --secondary: #f1f5f9;
-  --secondary-foreground: #0f172a;
-  --destructive: #ef4444;
-  --destructive-foreground: #ffffff;
-  --border: #e2e8f0;
-  --background: #ffffff;
-  --foreground: #0f172a;
+/* Easy Recruit Design System */
+@import "./tokens.css";
+
+/* Tailwind CSS base styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Button Component Styles */
+.btn-primary {
+  background-color: var(--color-primary-600);
+  color: white;
+  box-shadow: var(--shadow-sm);
+}
+.btn-primary:hover {
+  background-color: var(--color-primary-700);
+}
+.btn-primary:focus-visible {
+  --tw-ring-color: var(--color-primary-500);
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary-600);
+  color: white;
+  box-shadow: var(--shadow-sm);
+}
+.btn-secondary:hover {
+  background-color: var(--color-secondary-700);
+}
+.btn-secondary:focus-visible {
+  --tw-ring-color: var(--color-secondary-500);
+}
+
+.btn-outline {
+  border: 1px solid var(--color-neutral-300);
+  background-color: transparent;
+  color: var(--color-neutral-700);
+}
+.btn-outline:hover {
+  background-color: var(--color-neutral-50);
+  border-color: var(--color-neutral-400);
+}
+.btn-outline:focus-visible {
+  --tw-ring-color: var(--color-primary-500);
+}
+.dark .btn-outline {
+  border-color: var(--color-neutral-600);
+  color: var(--color-neutral-300);
+}
+.dark .btn-outline:hover {
+  background-color: var(--color-neutral-800);
+  border-color: var(--color-neutral-500);
+}
+
+.btn-ghost {
+  background-color: transparent;
+  color: var(--color-neutral-700);
+}
+.btn-ghost:hover {
+  background-color: var(--color-neutral-100);
+}
+.btn-ghost:focus-visible {
+  --tw-ring-color: var(--color-primary-500);
+}
+.dark .btn-ghost {
+  color: var(--color-neutral-300);
+}
+.dark .btn-ghost:hover {
+  background-color: var(--color-neutral-800);
+}
+
+.btn-destructive {
+  background-color: var(--color-error-600);
+  color: white;
+  box-shadow: var(--shadow-sm);
+}
+.btn-destructive:hover {
+  background-color: var(--color-error-700);
+}
+.btn-destructive:focus-visible {
+  --tw-ring-color: var(--color-error-500);
+}
+
+/* Badge Component Styles */
+.badge-default {
+  background-color: var(--color-neutral-100);
+  color: var(--color-neutral-800);
+}
+.dark .badge-default {
+  background-color: var(--color-neutral-800);
+  color: var(--color-neutral-200);
+}
+
+.badge-primary {
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-800);
+}
+.dark .badge-primary {
+  background-color: color-mix(in oklab, var(--color-primary-900) 30%, transparent);
+  color: var(--color-primary-300);
+}
+
+.badge-secondary {
+  background-color: var(--color-secondary-100);
+  color: var(--color-secondary-800);
+}
+.dark .badge-secondary {
+  background-color: color-mix(in oklab, var(--color-secondary-900) 30%, transparent);
+  color: var(--color-secondary-300);
+}
+
+.badge-success {
+  background-color: var(--color-success-100);
+  color: var(--color-success-800);
+}
+.dark .badge-success {
+  background-color: color-mix(in oklab, var(--color-success-900) 30%, transparent);
+  color: var(--color-success-300);
+}
+
+.badge-warning {
+  background-color: var(--color-warning-100);
+  color: var(--color-warning-800);
+}
+.dark .badge-warning {
+  background-color: color-mix(in oklab, var(--color-warning-900) 30%, transparent);
+  color: var(--color-warning-300);
+}
+
+.badge-error {
+  background-color: var(--color-error-100);
+  color: var(--color-error-800);
+}
+.dark .badge-error {
+  background-color: color-mix(in oklab, var(--color-error-900) 30%, transparent);
+  color: var(--color-error-300);
+}
+
+.badge-outline {
+  border: 1px solid var(--color-neutral-300);
+  background-color: transparent;
+  color: var(--color-neutral-700);
+}
+.dark .badge-outline {
+  border-color: var(--color-neutral-600);
+  color: var(--color-neutral-300);
+}
+
+/* Avatar Status Styles */
+.avatar-status-online {
+  background-color: var(--color-success-500);
+}
+
+.avatar-status-offline {
+  background-color: var(--color-neutral-400);
+}
+
+.avatar-status-away {
+  background-color: var(--color-warning-500);
+}
+
+.avatar-status-busy {
+  background-color: var(--color-error-500);
+}
+
+/* Input Error State Styles */
+.input-error {
+  border-color: var(--color-error-500) !important;
+  color: var(--color-error-600) !important;
+}
+.input-error:focus {
+  border-color: var(--color-error-500) !important;
+  --tw-ring-color: color-mix(in oklab, var(--color-error-500) 20%, transparent);
+}
+.input-error::placeholder {
+  color: var(--color-error-400) !important;
+}
+.dark .input-error {
+  color: var(--color-error-300) !important;
+}
+.dark .input-error::placeholder {
+  color: var(--color-error-500) !important;
+}
+
+.input-filled-error {
+  background-color: var(--color-error-50) !important;
+  color: var(--color-error-600) !important;
+}
+.input-filled-error::placeholder {
+  color: var(--color-error-400) !important;
+}
+.dark .input-filled-error {
+  background-color: color-mix(in oklab, var(--color-error-900) 20%, transparent) !important;
+  color: var(--color-error-300) !important;
+}
+.dark .input-filled-error::placeholder {
+  color: var(--color-error-500) !important;
+}
+.input-filled-error:focus {
+  --tw-ring-color: color-mix(in oklab, var(--color-error-500) 20%, transparent);
+}
+
+/* Input Error Label */
+.input-label-error {
+  color: var(--color-error-600) !important;
+}
+.dark .input-label-error {
+  color: var(--color-error-400) !important;
+}
+
+/* Input Required Indicator */
+.input-required {
+  color: var(--color-error-500);
+}
+
+/* Progress component variants */
+.progress-primary {
+  background-color: var(--color-primary-600) !important;
+}
+
+.progress-success {
+  background-color: var(--color-green-600) !important;
+}
+
+.progress-warning {
+  background-color: var(--color-yellow-600) !important;
+}
+
+.progress-error {
+  background-color: var(--color-red-600) !important;
+}
+
+/* Switch component variants */
+.switch-active {
+  background-color: var(--color-primary-600) !important;
+}
+
+.switch-inactive {
+  background-color: var(--color-neutral-300) !important;
+}
+
+/* Checkbox component variants */
+.checkbox-checked {
+  background-color: var(--color-primary-600) !important;
+  border-color: var(--color-primary-600) !important;
+}
+
+/* Radio component variants */
+.radio-checked {
+  background-color: var(--color-primary-600) !important;
+  border-color: var(--color-primary-600) !important;
+}
+
+/* Pagination component variants */
+.pagination-active {
+  background-color: var(--color-primary-600) !important;
+  color: white !important;
+}
+
+/* Dark mode variants */
+@media (prefers-color-scheme: dark) {
+  .progress-primary {
+    background-color: var(--color-primary-500) !important;
+  }
+  
+  .progress-success {
+    background-color: var(--color-green-500) !important;
+  }
+  
+  .progress-warning {
+    background-color: var(--color-yellow-500) !important;
+  }
+  
+  .progress-error {
+    background-color: var(--color-red-500) !important;
+  }
+
+  .switch-active {
+    background-color: var(--color-primary-400) !important;
+  }
+
+  .switch-inactive {
+    background-color: var(--color-neutral-600) !important;
+  }
+
+  .checkbox-checked {
+    background-color: var(--color-primary-500) !important;
+    border-color: var(--color-primary-500) !important;
+  }
+
+  .radio-checked {
+    background-color: var(--color-primary-500) !important;
+    border-color: var(--color-primary-500) !important;
+  }
+
+  .pagination-active {
+    background-color: var(--color-primary-500) !important;
+  }
 }
